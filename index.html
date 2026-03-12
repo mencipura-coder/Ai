@@ -268,15 +268,19 @@ padding:40px 20px;
 
 <nav id="menu">
 
-<a href="#">Home</a>
-<a href="#">Cari Kerja</a>
-<a href="#">Cari Pekerja</a>
-<a href="#">Lowongan</a>
-<a href="#">Login</a>
+<a href="index.html">Home</a>
+<a href="worker.html">Cari Kerja</a>
+<a href="company.html">Cari Pekerja</a>
+<a href="jobs.html">Lowongan</a>
+<a href="login.html">Login</a>
 
 </nav>
 
 </header>
+
+<button onclick="location.href='job-detail.html'">
+Lihat Detail
+</button>
 
 <section class="hero">
 
@@ -284,9 +288,10 @@ padding:40px 20px;
 
 <p>AI mencocokkan skill Anda dengan pekerjaan terbaik</p>
 
-<button class="btn1">Cari Kerja</button>
-<button class="btn2">Cari Pekerja</button>
+<button class="btn1" onclick="location.href='worker.html'">Cari Kerja</button>
 
+<button class="btn2" onclick="location.href='company.html'">Cari Pekerja</button>
+  
 <div class="search">
 <input id="searchInput" type="text" placeholder="Cari pekerjaan...">
 </div>
@@ -420,7 +425,7 @@ function applyJob(job){
 
 let text="Halo saya ingin melamar pekerjaan "+job
 
-let url="https://wa.me/6280000000000?text="+encodeURIComponent(text)
+let url="https://wa.me/6282349962035?text="+encodeURIComponent(text)
 
 window.open(url)
 
