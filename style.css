@@ -1,16 +1,14 @@
-.breaking-news{
-display:flex;
-align-items:center;
-background:#c00;
-color:white;
-overflow:hidden;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.breaking-title{
-background:#900;
-padding:8px 15px;
-font-weight:bold;
+html, body{
+width:100%;
+overflow-x:hidden;
 }
+
 
 0%{
 transform:translateX(100%);
@@ -135,9 +133,4 @@ color:white;
 text-align:center;
 padding:30px;
 margin-top:40px;
-}
-
-html, body{
-width:100%;
-overflow-x:hidden;
-  }
+ }
