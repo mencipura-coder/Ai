@@ -267,6 +267,8 @@ margin-top:40px;
 
 <div id="searchBox" style="display:none; padding:10px;">
 
+<div id="news-container" class="news-grid"></div>
+  
 <input 
 type="text"
 id="searchInput"
@@ -305,9 +307,8 @@ Ribuan pengunjung menghadiri festival budaya tahunan yang digelar di Wakatobi.
 
 </div>
 
-<div class="news-grid">
-
-<div class="news-card">
+<div class="news-grid" id="news-container"></div>
+  
 <h3>Wisata Baru di Pulau Tomia</h3>
 <p>Destinasi wisata baru mulai menarik perhatian wisatawan.</p>
 </div>
@@ -496,6 +497,37 @@ showNews(localBackupNews)
 })
 
 }
+function loadNews(){
+
+fetch("news.json")
+.then(res => res.json())
+.then(data => {
+
+let container = document.getElementById("news-container")
+
+container.innerHTML=""
+
+data.forEach(news => {
+
+container.innerHTML += `
+
+<div class="news-card">
+
+<h3>${news.title}</h3>
+
+<p>${news.content}</p>
+
+</div>
+
+`
+
+})
+
+})
+
+}
+
+document.addEventListener("DOMContentLoaded",loadNews)
 
 // ================= TAMPILKAN BERITA =================
 function showNews(news){
@@ -531,7 +563,40 @@ container.innerHTML += `
 })
 
 }
+function loadExternalNews(){
 
+let rss = "https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss/search?q=wakatobi"
+
+fetch(rss)
+.then(res => res.json())
+.then(data => {
+
+let container = document.getElementById("news-container")
+
+container.innerHTML=""
+
+data.items.slice(0,6).forEach(news => {
+
+container.innerHTML += `
+
+<div class="news-card">
+
+<h3>${news.title}</h3>
+
+<p>${news.description.substring(0,120)}...</p>
+
+<a href="${news.link}" target="_blank">Baca berita</a>
+
+</div>
+
+`
+
+})
+
+})
+
+}
+document.addEventListener("DOMContentLoaded",loadExternalNews)
 // ================= AI PAGE MONITOR =================
 function checkSystem(){
 
