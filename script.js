@@ -107,12 +107,14 @@ document.getElementById("waPenjual").value = ""
 
   }
 
-// HAMBURGER MENU
-
 function toggleMenu(){
 
 let menu = document.getElementById("hamburgerMenu")
 
-menu.classList.toggle("show")
+if(menu.classList.contains("show")){
+menu.classList.remove("show")
+}else{
+menu.classList.add("show")
+}
 
 }
