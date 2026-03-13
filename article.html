@@ -13,20 +13,11 @@
 
 <script>
 
-let url=new URLSearchParams(window.location.search)
-let id=url.get("id")
+let url = new URLSearchParams(window.location.search)
+let id = url.get("id")
 
-fetch("news.json")
-.then(res=>res.json())
-.then(data=>{
-
-let news=data[id]
-
-document.getElementById("title").innerText=news.title
-document.getElementById("date").innerText=news.date
-document.getElementById("content").innerText=news.content
-
-})
+// Halaman artikel kosong
+// Konten bisa ditambahkan nanti secara manual atau dari sistem lain
 
 </script>
 
