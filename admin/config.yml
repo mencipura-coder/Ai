@@ -2,6 +2,7 @@ backend:
   name: github
   repo: wakatobi-update/Ai
   branch: main
+  client_id: 0v23livfAnI4r20dB9h8
 
 media_folder: "gallery"
 public_folder: "/gallery"
@@ -16,3 +17,4 @@ collections:
       - {label: "Judul", name: "title", widget: "string"}
       - {label: "Isi Berita", name: "content", widget: "text"}
       - {label: "Tanggal", name: "date", widget: "datetime"}
+      - {label: "Gambar", name: "image", widget: "image"}
