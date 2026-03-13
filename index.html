@@ -347,7 +347,7 @@ Pemerintah daerah berharap kegiatan ini dapat meningkatkan jumlah wisatawan yang
 
 <script>
 
-// MENU
+// ================= MENU =================
 function toggleMenu(){
 
 let menu = document.getElementById("menu")
@@ -360,7 +360,7 @@ menu.style.display = "flex"
 
 }
 
-// SEARCH
+// ================= SEARCH =================
 function toggleSearch(){
 
 let search = document.getElementById("searchBox")
@@ -373,23 +373,60 @@ search.style.display = "block"
 
 }
 
-// AI ERROR DETECTOR
+// ================= AI ERROR DETECTOR =================
 window.onerror = function(message, source, lineno){
 
 console.log("AI Repair System mendeteksi error")
 
-alert("Sistem mencoba memperbaiki halaman")
-
+// cegah reload terus menerus
+if(!sessionStorage.getItem("reloaded")){
+sessionStorage.setItem("reloaded", true)
+alert("Sistem memperbaiki halaman")
 location.reload()
+}
 
 }
 
-// LOAD NEWS SYSTEM
+// ================= AI SEO SLUG =================
+function createSlug(title){
+
+return title
+.toLowerCase()
+.replaceAll(" ","-")
+.replace(/[^\w-]+/g,"")
+
+}
+
+// ================= AI RINGKASAN BERITA =================
+function makeSummary(text){
+
+return text.substring(0,120) + "..."
+
+}
+
+// ================= URUTKAN BERITA TERBARU =================
+function sortNews(news){
+
+return news.sort((a,b)=>{
+
+return new Date(b.date) - new Date(a.date)
+
+})
+
+}
+
+// ================= LOAD NEWS SYSTEM =================
 function loadNews(){
 
 fetch("news.json")
 .then(res => res.json())
-.then(data => showNews(data))
+.then(data => {
+
+let sortedNews = sortNews(data)
+
+showNews(sortedNews)
+
+})
 .catch(error => {
 
 console.log("Server gagal, pakai backup")
@@ -402,16 +439,54 @@ showNews(localBackupNews)
 
 }
 
-// AI PAGE MONITOR
+// ================= TAMPILKAN BERITA =================
+function showNews(news){
+
+let container = document.getElementById("news-container")
+
+if(!container) return
+
+container.innerHTML = ""
+
+news.forEach(item => {
+
+let slug = createSlug(item.title)
+
+let summary = makeSummary(item.content)
+
+container.innerHTML += `
+
+<div class="news-card">
+
+<h3>${item.title}</h3>
+
+<p>${summary}</p>
+
+<small>${item.date}</small>
+
+<a href="${slug}.html">Baca Selengkapnya</a>
+
+</div>
+
+`
+
+})
+
+}
+
+// ================= AI PAGE MONITOR =================
 function checkSystem(){
 
 let news = document.querySelector(".news-card")
 
 if(!news){
 
-console.log("Berita tidak ditemukan, sistem memperbaiki")
+console.log("Berita tidak ditemukan, mencoba reload")
 
+if(!sessionStorage.getItem("newsReload")){
+sessionStorage.setItem("newsReload", true)
 location.reload()
+}
 
 }
 
@@ -419,6 +494,9 @@ location.reload()
 
 // Jalankan pengecekan setiap 5 detik
 setInterval(checkSystem,5000)
+
+// Jalankan load berita saat halaman dibuka
+document.addEventListener("DOMContentLoaded", loadNews)
 
 </script>
   
