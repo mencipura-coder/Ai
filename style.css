@@ -1,3 +1,34 @@
+.breaking-news{
+display:flex;
+align-items:center;
+background:#c00;
+color:white;
+overflow:hidden;
+}
+
+.breaking-title{
+background:#900;
+padding:8px 15px;
+font-weight:bold;
+}
+
+.breaking-text{
+white-space:nowrap;
+padding-left:20px;
+animation:scrollNews 15s linear infinite;
+}
+
+@keyframes scrollNews{
+
+0%{
+transform:translateX(100%);
+}
+
+100%{
+transform:translateX(-100%);
+}
+
+}
 body{
 font-family:Arial, sans-serif;
 background:#f4f4f4;
