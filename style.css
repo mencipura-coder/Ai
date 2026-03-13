@@ -288,6 +288,30 @@ top:0;
 left:0;
 width:100%;
 z-index:99999;
+
+  /* HEADER FIX TOTAL */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:99999;
+}
+
+/* MENU JUGA IKUT FIX */
+.menu-scroll{
+position:fixed;
+top:60px;
+left:0;
+width:100%;
+background:#091427;
+z-index:99998;
+}
+
+/* JARAK KONTEN DARI HEADER */
+.hero{
+margin-top:120px;
+  }
 }
 
 /* TINGGI HEADER + MENU */
