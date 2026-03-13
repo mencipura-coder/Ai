@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: wakatobi-update.github.io
+  repo: wakatobi-update/wakatobi-update.github.io
   branch: main
 
 media_folder: "Ai/gallery"
