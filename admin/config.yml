@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: USERNAME/NAMA-REPO
+  repo: wakatobi-updat/wakatobi-update.github.io
 
 media_folder: "images"
 
