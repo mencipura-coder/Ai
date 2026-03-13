@@ -266,3 +266,54 @@ font-size:13px;
 color:#aaa;
 margin-top:10px;
   }
+.footer{
+background:#0f172a;
+color:white;
+padding:40px 20px;
+margin-top:40px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:1fr;
+gap:25px;
+}
+
+.footer h2{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.footer h3{
+margin-bottom:10px;
+}
+
+.footer-company a{
+display:block;
+color:#ccc;
+text-decoration:none;
+margin-bottom:6px;
+}
+
+.footer-company a:hover{
+color:white;
+}
+
+.footer-contact p{
+font-size:14px;
+margin-bottom:6px;
+}
+
+.footer-social a{
+display:inline-block;
+margin-right:10px;
+font-size:20px;
+color:white;
+}
+
+.footer-copy{
+text-align:center;
+margin-top:25px;
+font-size:13px;
+color:#bbb;
+}
