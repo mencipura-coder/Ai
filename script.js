@@ -152,6 +152,8 @@ fetch("news.json")
 
 let container=document.getElementById("news-container")
 
+if(!container) return
+
 container.innerHTML=""
 
 data.forEach((news,i)=>{
