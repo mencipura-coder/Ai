@@ -14,16 +14,6 @@ menu.style.display = "flex"
 
 }
 
-// HAMBURGER MENU
-
-function toggleMenu(){
-
-let menu = document.getElementById("hamburgerMenu")
-
-menu.classList.toggle("show")
-
-}
-
 // ======================
 // SEARCH
 // ======================
@@ -109,3 +99,13 @@ document.getElementById("lokasiBarang").value = ""
 document.getElementById("waPenjual").value = ""
 
   }
+
+// HAMBURGER MENU
+
+function toggleMenu(){
+
+let menu = document.getElementById("hamburgerMenu")
+
+menu.classList.toggle("show")
+
+}
