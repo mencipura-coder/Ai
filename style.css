@@ -135,4 +135,9 @@ color:white;
 text-align:center;
 padding:30px;
 margin-top:40px;
+}
+
+html, body{
+width:100%;
+overflow-x:hidden;
   }
