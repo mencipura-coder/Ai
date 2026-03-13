@@ -280,3 +280,23 @@ a{
 text-decoration:none;
 color:inherit;
   }
+/* FIX HEADER AGAR TETAP SAAT SCROLL */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:99999;
+}
+
+/* TINGGI HEADER + MENU */
+body{
+padding-top:130px;
+}
+
+/* MENU IKUT TETAP DI ATAS */
+.menu-scroll{
+position:relative;
+z-index:99999;
+}
