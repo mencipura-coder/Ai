@@ -1,15 +1,17 @@
 backend:
   name: github
-  repo: wakatobi-updat/wakatobi-update.github.io
+  repo: wakatobi-update/wakatobi-update.github.io
+  branch: main
 
-media_folder: "images"
+media_folder: "Ai/images"
+public_folder: "/Ai/images"
 
 collections:
   - name: "news"
     label: "Berita"
-    folder: "news"
+    folder: "Ai/news"
     create: true
     fields:
-      - {label: "Judul", name: "title", widget: "string"}
-      - {label: "Tanggal", name: "date", widget: "datetime"}
-      - {label: "Isi", name: "body", widget: "markdown"}
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Tanggal", name: "date", widget: "datetime" }
+      - { label: "Isi", name: "body", widget: "markdown" }
