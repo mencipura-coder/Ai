@@ -1,58 +1,34 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Wakatobi Update</title>
-
-<link rel="stylesheet" href="style.css">
-
+<title>Artikel</title>
 </head>
 
 <body>
 
-<header>
-
-<div class="header-top">
-<div class="logo">Wakatobi Update</div>
-</div>
-
-</header>
-
-<section class="article">
-
 <h1 id="title"></h1>
-
 <p id="date"></p>
-
-<img id="image">
-
 <p id="content"></p>
-
-</section>
 
 <script>
 
-const params = new URLSearchParams(window.location.search)
-
-const id = params.get("id")
+let url=new URLSearchParams(window.location.search)
+let id=url.get("id")
 
 fetch("news.json")
-.then(res => res.json())
-.then(data => {
+.then(res=>res.json())
+.then(data=>{
 
-let news = data[id]
+let news=data[id]
 
-document.getElementById("title").innerText = news.title
-document.getElementById("date").innerText = news.date
-document.getElementById("content").innerText = news.content
-document.getElementById("image").src = news.image
+document.getElementById("title").innerText=news.title
+document.getElementById("date").innerText=news.date
+document.getElementById("content").innerText=news.content
 
 })
 
 </script>
 
 </body>
-  </html>
+</html>
