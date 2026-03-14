@@ -208,4 +208,10 @@ font-family:'Poppins',sans-serif;
 .menu-icon{
 font-size:20px;
 cursor:pointer;
+}
+
+body{
+padding-top:120px;
+background:#f4f4f4;
+font-family:'Roboto',sans-serif;
   }
