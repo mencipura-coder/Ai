@@ -23,6 +23,60 @@ behavior:"smooth"
 function postingStatus(){
 
 let text = document.getElementById("postText").value
+let image = document.getElementById("postImage").files[0]
+
+if(text === ""){
+alert("Tulis sesuatu dulu")
+return
+}
+
+let feed = document.querySelector(".feed")
+
+let post = document.createElement("div")
+
+post.className = "product-card"
+
+let imgHTML = ""
+
+if(image){
+let url = URL.createObjectURL(image)
+imgHTML = `<img src="${url}">`
+}
+
+post.innerHTML = `
+
+${imgHTML}
+
+<div class="product-info">
+
+<h3>${text}</h3>
+
+<p class="location">📍 Sekitar kamu • ${getTime()}</p>
+
+<div class="product-action">
+
+<button class="chat">💬 Chat</button>
+<button class="map">📍 Map</button>
+<button class="love">❤</button>
+
+</div>
+
+</div>
+
+`
+
+feed.prepend(post)
+
+savePosts()
+
+document.getElementById("postText").value = ""
+document.getElementById("postImage").value = ""
+
+alert("Posting berhasil!")
+
+  }
+
+let text = document.getElementById("postText").value
 
 if(text === ""){
 alert("Tulis sesuatu dulu")
