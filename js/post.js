@@ -58,6 +58,8 @@ post.innerHTML = `
 `
 
 feed.prepend(post)
+  
+savePosts()
 
 document.getElementById("postText").value = ""
 
