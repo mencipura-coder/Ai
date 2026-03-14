@@ -38,6 +38,17 @@ preview.style.display = "block"
 
 function postingStatus(){
 
+let text = document.getElementById("postText").value
+
+if(text === ""){
+alert("Tulis sesuatu dulu")
+return
+}
+
+alert("Posting berhasil!")
+
+}
+
 document.getElementById("postText").value = ""
 document.getElementById("postImage").value = ""
 document.getElementById("previewImg").style.display = "none"
