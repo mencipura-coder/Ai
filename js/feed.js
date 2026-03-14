@@ -22,3 +22,23 @@ e.target.classList.toggle("liked")
 }
 
 })
+
+function searchItem(){
+
+let input = document.querySelector(".search-box input").value.toLowerCase()
+
+let items = document.querySelectorAll(".product-card")
+
+items.forEach(function(item){
+
+let text = item.innerText.toLowerCase()
+
+if(text.includes(input)){
+item.style.display = "block"
+}else{
+item.style.display = "none"
+}
+
+})
+
+}
