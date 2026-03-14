@@ -1,8 +1,18 @@
 function saveProfile(){
 
-let name = document.getElementById("profileName").value
-let location = document.getElementById("profileLocation").value
-let bio = document.getElementById("profileBio").value
+let nameEl = document.getElementById("profileName")
+let locationEl = document.getElementById("profileLocation")
+let bioEl = document.getElementById("profileBio")
+
+// tambahan pengecekan
+if(!nameEl || !locationEl || !bioEl){
+console.log("Elemen profil tidak ditemukan")
+return
+}
+
+let name = nameEl.value
+let location = locationEl.value
+let bio = bioEl.value
 
 localStorage.setItem("ikita_name", name)
 localStorage.setItem("ikita_location", location)
@@ -18,16 +28,21 @@ let name = localStorage.getItem("ikita_name")
 let location = localStorage.getItem("ikita_location")
 let bio = localStorage.getItem("ikita_bio")
 
-if(name){
-document.getElementById("profileName").value = name
+let nameEl = document.getElementById("profileName")
+let locationEl = document.getElementById("profileLocation")
+let bioEl = document.getElementById("profileBio")
+
+// tambahan pengecekan agar tidak error
+if(name && nameEl){
+nameEl.value = name
 }
 
-if(location){
-document.getElementById("profileLocation").value = location
+if(location && locationEl){
+locationEl.value = location
 }
 
-if(bio){
-document.getElementById("profileBio").value = bio
+if(bio && bioEl){
+bioEl.value = bio
 }
 
-                        }
+}
