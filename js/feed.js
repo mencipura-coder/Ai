@@ -36,14 +36,6 @@ item.style.display = "none"
 
 document.addEventListener("click", function(e){
 
-if(e.target.classList.contains("love")){
-e.target.classList.toggle("liked")
-}
-
-})
-
-document.addEventListener("click", function(e){
-
 let btn = e.target.closest(".love")
 
 if(btn){
