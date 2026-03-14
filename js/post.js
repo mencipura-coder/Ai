@@ -41,7 +41,7 @@ post.innerHTML = `
 
 <h3>${text}</h3>
 
-<p class="location">📍 Sekitar kamu</p>
+<p class="location">📍 Sekitar kamu • ${getTime()}</p>
 
 <div class="product-action">
 
