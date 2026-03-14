@@ -239,4 +239,10 @@ padding:12px 10px;
 
 .menu-scroll a:hover{
 color:#4da3ff;
-  }
+}
+
+body{
+padding-top:120px;
+background:#f4f4f4;
+font-family:'Roboto',sans-serif;
+}
