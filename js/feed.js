@@ -61,3 +61,13 @@ document.querySelector(".feed").innerHTML = saved
 }
 
 }
+
+document.addEventListener("click", function(e){
+
+let btn = e.target.closest(".love")
+
+if(btn){
+btn.classList.toggle("liked")
+}
+
+})
