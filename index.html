@@ -198,136 +198,40 @@ Lokasi
 <i class="fa-solid fa-plus"></i>
 </div> 
 
-/* =========================
-PROFILE UPGRADE IKITA
-========================= */
+<div class="profile-container">
 
-.profile-container{
-max-width:500px;
-margin:40px auto;
-background:white;
-border-radius:20px;
-padding:25px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-font-family:'Poppins',sans-serif;
-}
+<div class="profile-header">
 
-/* header profil */
+<img src="gallery/profile.jpg" class="profile-photo">
 
-.profile-header{
-text-align:center;
-margin-bottom:25px;
-}
+<div class="profile-name">Nama Pengguna</div>
+<div class="profile-location">Wakatobi, Sulawesi Tenggara</div>
 
-.profile-photo{
-width:110px;
-height:110px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #f1f5f9;
-margin-bottom:10px;
-}
+<button>Edit Profil</button>
 
-.profile-name{
-font-size:22px;
-font-weight:700;
-color:#0b1b34;
-margin-bottom:4px;
-}
+</div>
 
-.profile-location{
-font-size:14px;
-color:#64748b;
-margin-bottom:10px;
-}
+<div class="profile-menu">
 
-.profile-header button{
-background:#0b1b34;
-color:white;
-border:none;
-padding:8px 16px;
-border-radius:20px;
-font-size:14px;
-cursor:pointer;
-}
+<div>🛍 Jualan Saya</div>
+<div>❤ Favorit</div>
+<div>💬 Pesan</div>
+<div>⚙ Pengaturan</div>
 
-/* menu profil */
+</div>
 
-.profile-menu{
-display:flex;
-flex-direction:column;
-gap:8px;
-margin-bottom:20px;
-}
+<div class="profile-form">
 
-.profile-menu div{
-background:#f8fafc;
-padding:12px 14px;
-border-radius:12px;
-font-size:15px;
-display:flex;
-align-items:center;
-gap:10px;
-cursor:pointer;
-transition:0.2s;
-}
+<input type="file">
 
-.profile-menu div:hover{
-background:#e2e8f0;
-}
+<input type="text" placeholder="Nama kamu">
 
-/* form profil */
+<input type="text" placeholder="Lokasi">
 
-.profile-form{
-display:flex;
-flex-direction:column;
-gap:10px;
-}
+<textarea placeholder="Bio singkat"></textarea>
 
-.profile-form input,
-.profile-form textarea{
-padding:12px;
-border-radius:10px;
-border:1px solid #e2e8f0;
-font-size:14px;
-font-family:'Roboto',sans-serif;
-}
+<button>Simpan Profil</button>
 
-.profile-form textarea{
-resize:none;
-height:70px;
-}
-
-.profile-form button{
-background:#16a34a;
-color:white;
-border:none;
-padding:12px;
-border-radius:10px;
-font-size:15px;
-cursor:pointer;
-transition:0.2s;
-}
-
-.profile-form button:hover{
-background:#15803d;
-}
-
-/* animasi smooth */
-
-.profile-container{
-animation:profileFade 0.4s ease;
-}
-
-@keyframes profileFade{
-from{
-opacity:0;
-transform:translateY(10px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
+</div>
   
 </body>                                                                     </html>
