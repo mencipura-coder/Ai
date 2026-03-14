@@ -20,6 +20,21 @@ behavior:"smooth"
 
 }
 
+function previewImage(){
+
+let file = document.getElementById("postImage").files[0]
+let preview = document.getElementById("previewImg")
+
+if(file){
+
+let url = URL.createObjectURL(file)
+
+preview.src = url
+preview.style.display = "block"
+
+}
+
+}
 
 function postingStatus(){
 
