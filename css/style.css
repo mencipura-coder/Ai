@@ -425,68 +425,126 @@ max-width:100%;
   }
 
 /* =========================
-PROFILE FIX IKITA
+PROFILE UPGRADE IKITA
 ========================= */
 
-.profil,
-.profil-menu,
+/* animasi muncul */
 .profile-card,
-.profile-container{
-max-width:500px;
-margin:auto;
-padding:15px;
-}
-
 .profil-card{
-background:white;
-border-radius:18px;
-padding:20px;
-text-align:center;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-margin-bottom:15px;
+animation:profileFade 0.4s ease;
 }
 
+@keyframes profileFade{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* foto profil bisa diklik */
+.profile-photo,
 .profil-foto{
-width:100px;
-height:100px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:10px;
+cursor:pointer;
+transition:0.3s;
 }
 
-.profil-menu{
-background:white;
-border-radius:18px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-margin-bottom:15px;
+.profile-photo:hover,
+.profil-foto:hover{
+transform:scale(1.05);
 }
 
+/* input file disembunyikan agar foto langsung diklik */
+#uploadPhoto{
+display:none;
+}
+
+/* tombol profil */
+.profile-card button,
+.profil-card button{
+background:#0b1b34;
+color:white;
+border:none;
+padding:10px 16px;
+border-radius:20px;
+font-size:14px;
+cursor:pointer;
+margin-top:10px;
+transition:0.2s;
+}
+
+.profile-card button:hover,
+.profil-card button:hover{
+background:#162a4d;
+}
+
+/* input profil */
+.profile-card input,
+.profile-card textarea{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:1px solid #e2e8f0;
+font-size:14px;
+}
+
+/* bio */
+.profile-card textarea{
+resize:none;
+height:70px;
+}
+
+/* menu profil interaktif */
 .menu-item{
-display:flex;
-align-items:center;
-gap:10px;
-padding:14px;
-border-bottom:1px solid #eee;
-font-size:15px;
+cursor:pointer;
+transition:0.2s;
 }
 
-.menu-item:last-child{
-border-bottom:none;
+.menu-item:hover{
+background:#f1f5f9;
 }
 
-.profile-card{
+/* badge jumlah jualan */
+.menu-item span::after{
+content:"";
+}
+
+/* card jualan user */
+.user-post{
 background:white;
-border-radius:18px;
-padding:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
+border-radius:16px;
+padding:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
 margin-top:15px;
 }
 
-.profile-card input,
-.profile-card textarea{
-margin-top:8px;
+/* header posting */
+.post-user{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:8px;
 }
 
-.profile-container{
+.post-user img{
+width:35px;
+height:35px;
+border-radius:50%;
+object-fit:cover;
+}
+
+/* halaman jualan saya */
+.my-sales{
 margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+/* label upload foto */
+.profile-photo::after{
+content:"";
 }
