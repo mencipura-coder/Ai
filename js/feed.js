@@ -12,3 +12,13 @@ menit = "0" + menit
 return jam + ":" + menit
 
 }
+
+document.addEventListener("click", function(e){
+
+if(e.target.classList.contains("love")){
+
+e.target.classList.toggle("liked")
+
+}
+
+})
