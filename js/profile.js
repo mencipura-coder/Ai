@@ -2,8 +2,6 @@
 IKITA PROFILE SYSTEM
 ========================= */
 
-/* ambil elemen */
-
 let photoInput = document.getElementById("uploadPhoto")
 let profilePhoto = document.getElementById("profilePhoto")
 
@@ -75,7 +73,6 @@ let location = localStorage.getItem("ikita_location")
 let bio = localStorage.getItem("ikita_bio")
 let photo = localStorage.getItem("ikita_photo")
 
-
 if(name){
 
 nameInput.value = name
@@ -85,7 +82,6 @@ nameDisplay.innerText = name
 }
 
 }
-
 
 if(location){
 
@@ -97,11 +93,9 @@ locationDisplay.innerText = location
 
 }
 
-
 if(bio){
 bioInput.value = bio
 }
-
 
 if(photo){
 profilePhoto.src = photo
