@@ -1,3 +1,78 @@
+/* ===== MOBILE FIX ===== */
+
+html, body{
+margin:0;
+padding:0;
+max-width:100%;
+overflow-x:hidden;
+font-family: Arial, sans-serif;
+background:#f4f6f8;
+}
+
+/* semua elemen ikut ukuran layar */
+*{
+box-sizing:border-box;
+}
+
+/* container utama */
+.container{
+width:100%;
+max-width:500px;
+margin:auto;
+padding:10px;
+}
+
+/* gambar agar tidak keluar layar */
+img{
+max-width:100%;
+height:auto;
+display:block;
+}
+
+/* input dan textarea */
+input, textarea{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:16px;
+}
+
+/* tombol */
+button{
+border:none;
+border-radius:12px;
+padding:10px 16px;
+font-size:15px;
+cursor:pointer;
+}
+
+/* feed */
+.feed{
+width:100%;
+}
+
+/* card posting */
+.product-card{
+background:white;
+border-radius:15px;
+padding:15px;
+margin-bottom:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* tombol aksi */
+.product-action{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+.product-action button{
+flex:1;
+background:#f1f3f6;
+}
+
 /* =========================
 HOME CONTAINER
 ========================= */
