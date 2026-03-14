@@ -38,8 +38,9 @@ preview.style.display = "block"
 
 function postingStatus(){
 
-let text = document.getElementById("postText").value
-let image = document.getElementById("postImage").files[0]
+document.getElementById("postText").value = ""
+document.getElementById("postImage").value = ""
+document.getElementById("previewImg").style.display = "none"
 
 if(text === ""){
 alert("Tulis sesuatu dulu")
