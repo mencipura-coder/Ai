@@ -32,7 +32,6 @@ let reader = new FileReader()
 reader.onload = function(e){
 
 profilePhoto.src = e.target.result
-
 localStorage.setItem("ikita_photo", e.target.result)
 
 }
@@ -43,8 +42,6 @@ reader.readAsDataURL(file)
 
 }
 
-document.getElementById("profileNameDisplay").innerText = name
-document.getElementById("profileLocationDisplay").innerText = location
 
 /* =========================
 SIMPAN PROFIL
@@ -78,6 +75,7 @@ let location = localStorage.getItem("ikita_location")
 let bio = localStorage.getItem("ikita_bio")
 let photo = localStorage.getItem("ikita_photo")
 
+
 if(name){
 
 nameInput.value = name
@@ -87,6 +85,7 @@ nameDisplay.innerText = name
 }
 
 }
+
 
 if(location){
 
@@ -98,9 +97,11 @@ locationDisplay.innerText = location
 
 }
 
+
 if(bio){
 bioInput.value = bio
 }
+
 
 if(photo){
 profilePhoto.src = photo
@@ -114,43 +115,3 @@ LOAD SAAT HALAMAN DIBUKA
 ========================= */
 
 document.addEventListener("DOMContentLoaded", loadProfile)
-
-// upload foto
-photoInput.addEventListener("change", function(){
-
-let file = this.files[0]
-
-  if(name){
-nameInput.value = name
-document.getElementById("profileNameDisplay").innerText = name
-}
-
-if(location){
-locationInput.value = location
-document.getElementById("profileLocationDisplay").innerText = location
-  }
-  
-if(file){
-
-let reader = new FileReader()
-
-reader.onload = function(e){
-
-profilePhoto.src = e.target.result
-
-localStorage.setItem("ikita_photo", e.target.result)
-
-}
-
-reader.readAsDataURL(file)
-
-}
-
-})
-
-// load foto profil
-let savedPhoto = localStorage.getItem("ikita_photo")
-
-if(savedPhoto){
-profilePhoto.src = savedPhoto
-}
