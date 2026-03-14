@@ -24,7 +24,9 @@ const reader = new FileReader();
 
 reader.onload = function(e){
 
+if(profilePhoto){
 profilePhoto.src = e.target.result;
+}
 
 localStorage.setItem("ikita_photo", e.target.result);
 
@@ -43,6 +45,11 @@ SIMPAN PROFIL
 ========================= */
 
 function saveProfile(){
+
+if(!nameInput || !locationInput || !bioInput){
+console.log("Elemen profil tidak ditemukan");
+return;
+}
 
 const name = nameInput.value;
 const location = locationInput.value;
@@ -72,7 +79,10 @@ const photo = localStorage.getItem("ikita_photo");
 
 
 if(name){
+
+if(nameInput){
 nameInput.value = name;
+}
 
 document.querySelectorAll(".profile-name").forEach(el=>{
 el.innerText = name;
@@ -84,7 +94,10 @@ el.innerText = name;
 }
 
 if(location){
+
+if(locationInput){
 locationInput.value = location;
+}
 
 document.querySelectorAll(".profile-location").forEach(el=>{
 el.innerText = location;
@@ -96,12 +109,16 @@ el.innerText = location;
 }
 
 if(bio){
+if(bioInput){
 bioInput.value = bio;
+}
 }
 
 if(photo){
 
+if(profilePhoto){
 profilePhoto.src = photo;
+}
 
 document.querySelectorAll(".profile-photo").forEach(el=>{
 el.src = photo;
