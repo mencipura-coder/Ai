@@ -1,434 +1,10 @@
-
-/* ===== MOBILE FIX ===== */
-
-html, body{
-margin:0;
-padding:0;
-max-width:100%;
-overflow-x:hidden;
-font-family: Arial, sans-serif;
-background:#f4f6f8;
-}
-
-/* semua elemen ikut ukuran layar */
-*{
-box-sizing:border-box;
-}
-
-/* container utama */
-.container{
-width:100%;
-max-width:500px;
-margin:auto;
-padding:10px;
-}
-
-/* gambar agar tidak keluar layar */
-img{
-max-width:100%;
-height:auto;
-display:block;
-}
-
-/* input dan textarea */
-input, textarea{
-width:100%;
-padding:12px;
-border-radius:10px;
-border:1px solid #ddd;
-font-size:16px;
-}
-
-/* tombol */
-button{
-border:none;
-border-radius:12px;
-padding:10px 16px;
-font-size:15px;
-cursor:pointer;
-}
-
-/* feed */
-.feed{
-width:100%;
-}
-
-/* card posting */
-.product-card{
-background:white;
-border-radius:15px;
-padding:15px;
-margin-bottom:15px;
-box-shadow:0 4px 10px rgba(0,0,0,0.08);
-}
-
-/* tombol aksi */
-.product-action{
-display:flex;
-gap:10px;
-margin-top:10px;
-}
-
-.product-action button{
-flex:1;
-background:#f1f3f6;
-}
-
-/* =========================
-HOME CONTAINER
-========================= */
-
-.home{
-padding:20px;
-width:100%;
-max-width:500px;
-margin:auto;
-}
-
-
-/* =========================
-SEARCH BOX MODERN
-========================= */
-
-.search-box input{
-width:100%;
-padding:14px 16px;
-border-radius:25px;
-border:2px solid #0b1b34;
-font-size:15px;
-margin-bottom:15px;
-background:white;
-}
-
-
-/* =========================
-POST ACTION BUTTON
-========================= */
-
-.post-action{
-display:flex;
-gap:12px;
-margin-bottom:20px;
-}
-
-.post-action button{
-flex:1;
-padding:14px;
-border:none;
-border-radius:25px;
-font-size:15px;
-font-weight:600;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:8px;
-cursor:pointer;
-transition:0.2s;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.post-action button:hover{
-transform:scale(1.03);
-}
-
-.jual-btn{
-background:#16a34a;
-color:white;
-}
-
-.cari-btn{
-background:#2563eb;
-color:white;
-}
-
-
-/* =========================
-FEED
-========================= */
-
-.feed{
-display:flex;
-flex-direction:column;
-gap:18px;
-}
-
-
-/* =========================
-CARD PRODUK MODERN
-========================= */
-
-.product-card{
-background:white;
-border-radius:16px;
-overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-transition:0.2s;
-}
-
-.product-card:hover{
-transform:translateY(-3px);
-}
-
-.product-card img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
-
-.product-info{
-padding:16px;
-}
-
-.product-info h3{
-font-size:18px;
-margin-bottom:5px;
-}
-
-.price{
-font-size:16px;
-color:#0b1b34;
-font-weight:bold;
-margin-bottom:5px;
-}
-
-.location{
-font-size:14px;
-color:#666;
-margin-bottom:10px;
-}
-
-
-/* =========================
-ACTION BUTTON
-========================= */
-
-.product-action{
-display:flex;
-gap:10px;
-}
-
-.product-action button{
-flex:1;
-border:none;
-padding:10px;
-border-radius:10px;
-background:#f1f5f9;
-font-size:14px;
-cursor:pointer;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:5px;
-}
-
-.product-action button:hover{
-background:#e2e8f0;
-}
-
-
-/* =========================
-FLOATING POST BUTTON
-========================= */
-
-.float-post{
-position:fixed;
-bottom:25px;
-right:20px;
-width:55px;
-height:55px;
-background:#0b1b34;
-color:white;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:22px;
-box-shadow:0 6px 18px rgba(0,0,0,0.2);
-cursor:pointer;
-z-index:9999;
-}
-
-/*header*/
-
-header{
-background:#0b1b34;
-color:white;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:9999;
-}
-
-.header-top{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-}
-
-.menu-scroll{
-display:flex;
-justify-content:space-around;
-background:#091427;
-}
-
-.menu-scroll a{
-color:white;
-text-decoration:none;
-padding:12px;
-}
-
-body{
-margin:0;
-padding-top:120px;
-background:#f4f4f4;
-font-family:'Roboto',sans-serif;
-  }
-
-/* =========================
-MENU SCROLL FIX
-========================= */
-
-.menu-scroll{
-display:flex;
-justify-content:space-around;
-align-items:center;
-background:#091427;
-position:fixed;
-top:60px;
-left:0;
-width:100%;
-z-index:9998;
-}
-
-.menu-scroll a{
-color:white;
-text-decoration:none;
-font-family:'Poppins',sans-serif;
-font-size:14px;
-padding:12px 10px;
-}
-
-.menu-scroll a:hover{
-color:#4da3ff;
-}
-
-
-/* =========================
-HAMBURGER MENU
-========================= */
-
-.menu-icon{
-font-size:20px;
-cursor:pointer;
-color:white;
-}
-
-.hamburger-menu{
-position:fixed;
-top:60px;
-right:-250px;
-width:220px;
-height:100%;
-background:white;
-box-shadow:-3px 0 10px rgba(0,0,0,0.2);
-padding:20px;
-display:flex;
-flex-direction:column;
-gap:12px;
-transition:0.3s;
-z-index:9999;
-}
-
-.hamburger-menu.show{
-right:0;
-}
-
-.hamburger-menu a{
-text-decoration:none;
-color:#0b1b34;
-font-size:14px;
-  }
-
-.love.liked{
-color:red;
-  }
-
-html, body{
-overflow-x: hidden;
-max-width: 100%;
-}
-
-*{
-box-sizing: border-box;
-}
-
-img{
-max-width:100%;
-height:auto;
-}
-
-input, textarea{
-width:100%;
-  }
-
-/* =========================
-ANTI GESER KIRI KANAN FIX
-========================= */
-
-/* paksa semua elemen tidak lebih lebar dari layar */
-html, body{
-width:100%;
-max-width:100%;
-overflow-x:hidden;
-}
-
-/* semua elemen ikut batas layar */
-*,
-*::before,
-*::after{
-max-width:100%;
-}
-
-/* pastikan flex tidak keluar layar */
-.feed,
-.post-action,
-.product-action{
-width:100%;
-overflow:hidden;
-}
-
-/* header dan menu jangan melebihi layar */
-header,
-.menu-scroll{
-max-width:100%;
-overflow:hidden;
-}
-
-/* gambar tidak boleh memaksa lebar */
-img{
-max-width:100%;
-height:auto;
-display:block;
-}
-
-/* cegah tombol membuat overflow */
-button{
-max-width:100%;
-}
-
-/* cegah card keluar layar */
-.product-card{
-width:100%;
-max-width:100%;
-  }
-
 /* =========================
 IKITA PROFILE LAYOUT FIX
+DINONAKTIFKAN SEMENTARA
 ========================= */
 
-/* area halaman profil */
+/*
+
 .profil,
 .profil-menu,
 .profile-card,
@@ -436,7 +12,6 @@ IKITA PROFILE LAYOUT FIX
 background:transparent;
 }
 
-/* jarak antar bagian profil */
 .profil{
 margin-top:10px;
 }
@@ -453,7 +28,6 @@ margin-top:15px;
 margin-top:20px;
 }
 
-/* card profil utama */
 .profil-card{
 background:linear-gradient(135deg,#0b1b34,#1e3a5f);
 border-radius:20px;
@@ -461,14 +35,12 @@ color:white;
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* menu profil terlihat seperti card */
 .profil-menu{
 background:white;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
 border-radius:18px;
 }
 
-/* item menu */
 .menu-item{
 transition:0.2s;
 }
@@ -477,13 +49,11 @@ transition:0.2s;
 background:#f1f5f9;
 }
 
-/* card edit profil */
 .profile-card{
 background:white;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* container profil bawah */
 .profile-container{
 background:white;
 padding:20px;
@@ -491,13 +61,11 @@ border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* foto profil */
 .profil-foto,
 .profile-photo{
 background:white;
 }
 
-/* animasi muncul */
 .profil-card,
 .profile-card,
 .profile-container{
@@ -513,9 +81,7 @@ to{
 opacity:1;
 transform:translateY(0);
 }
-  }
-
-/* ===== PROFILE BACKGROUND FIX ===== */
+}
 
 .profil{
 background:transparent;
@@ -539,3 +105,5 @@ margin-top:15px;
 .profile-container{
 margin-top:20px;
 }
+
+*/
