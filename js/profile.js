@@ -110,6 +110,4 @@ LOAD SAAT HALAMAN DIBUKA
 
 document.addEventListener("DOMContentLoaded", loadProfile)
 
-function saveProfile(){
-alert("Tombol Simpan Profil bekerja")
-}
+document.querySelector(".save-btn").addEventListener("click", saveProfileReal)
