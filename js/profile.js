@@ -109,3 +109,7 @@ LOAD SAAT HALAMAN DIBUKA
 ========================= */
 
 document.addEventListener("DOMContentLoaded", loadProfile)
+
+function saveProfile(){
+alert("Tombol Simpan Profil bekerja")
+}
